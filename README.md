@@ -1,7 +1,7 @@
 # OneDirect-Task
 This is Flight booking task
 
-##Using the app
+## Using the app
 1. Clone the repo and compile the app
 2. insert scripts will run for the first time automatically
 3. select source, destination, date and number of passengers and search for the flight.
