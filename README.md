@@ -8,3 +8,10 @@ This is Flight booking task
 4. list of available flights on that day will appear.
 5. select a flight and do final check on booking. enter username/email id and book the flight.
 6. booking id will be generated.
+
+
+## Note
+*Client Side is the required app with landing pages.
+*Admin side is the admin portal for monitoring database (Partially implemented)
+*Images are not getting loaded
+*You can check ticket by booking id
