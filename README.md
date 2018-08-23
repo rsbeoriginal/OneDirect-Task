@@ -15,3 +15,5 @@ This is Flight booking task
 2. Admin side is the admin portal for monitoring database (Partially implemented)
 3. Images are not getting loaded
 4. You can check ticket by booking id
+5. Insert Script details(1 week flight details are only added from current date, only added on first run when database is empty)
+6. SQLite is used as underlying database.
