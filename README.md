@@ -11,7 +11,7 @@ This is Flight booking task
 
 
 ## Note
-Client Side is the required app with landing pages.
-Admin side is the admin portal for monitoring database (Partially implemented)
-Images are not getting loaded
-You can check ticket by booking id
+1. Client Side is the required app with landing pages.
+2. Admin side is the admin portal for monitoring database (Partially implemented)
+3. Images are not getting loaded
+4. You can check ticket by booking id
