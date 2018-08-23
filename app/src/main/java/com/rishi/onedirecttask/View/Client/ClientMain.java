@@ -14,6 +14,7 @@ import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.rishi.onedirecttask.MyApplication;
 import com.rishi.onedirecttask.R;
@@ -41,6 +42,9 @@ public class ClientMain extends AppCompatActivity implements View.OnClickListene
     public static Integer noOfPassengers;
     TextView tvResult;
 
+    EditText etBookingId;
+    Button bCheck;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -51,6 +55,8 @@ public class ClientMain extends AppCompatActivity implements View.OnClickListene
         spinSource=findViewById(R.id.spinSource);
         etPassengers=findViewById(R.id.etPassenger);
         bSearch=findViewById(R.id.bSearch);
+        (bCheck=findViewById(R.id.bCheck)).setOnClickListener(this);
+        etBookingId=findViewById(R.id.etBookingId);
         tvResult = findViewById(R.id.tvResult);
         printAllFlights();
 
@@ -150,6 +156,25 @@ public class ClientMain extends AppCompatActivity implements View.OnClickListene
 
                     startActivity(new Intent(ClientMain.this,FlightList.class));
 
+                }
+                break;
+            case R.id.bCheck:
+                if(etBookingId.getText().toString().length()>0){
+                    Integer bid=null,fid;
+                    try{
+                        bid=Integer.parseInt(etBookingId.getText().toString());
+                        fid=MyApplication.myDatabase.myDao().getBookingById(bid).flightId;
+//                        if(fid==null) {
+                            Intent intent = new Intent(this, FinalBooking.class);
+                            intent.putExtra("flightId", fid);
+                            intent.putExtra("display",true);
+                            startActivity(intent);
+//                        }else {
+//                            Toast.makeText(this, "Not Found", Toast.LENGTH_SHORT).show();
+//                        }
+                    }catch (Exception e){
+                        Toast.makeText(this, "Not Found!! ", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 break;
         }

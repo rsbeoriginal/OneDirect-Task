@@ -69,4 +69,7 @@ public interface MyDao {
     @Query("select max(id) from Booking")
     Integer maxBookingId();
 
+    @Query("select * from Booking where id=:id")
+    Booking getBookingById(Integer id);
+
 }

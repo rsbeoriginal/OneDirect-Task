@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.rishi.onedirecttask.View.Admin.AdminMain;
 import com.rishi.onedirecttask.View.Client.ClientMain;
 import com.rishi.onedirecttask.db.Model.Airline;
 import com.rishi.onedirecttask.db.Model.Airport;
@@ -114,6 +115,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.bAdmin:
+                startActivity(new Intent(MainActivity.this, AdminMain.class));
                 break;
             case R.id.bClient:
                 startActivity(new Intent(MainActivity.this, ClientMain.class));

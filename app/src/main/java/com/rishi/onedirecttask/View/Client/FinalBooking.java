@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.rishi.onedirecttask.MyApplication;
 import com.rishi.onedirecttask.R;
@@ -42,6 +43,8 @@ public class FinalBooking extends AppCompatActivity implements View.OnClickListe
     EditText etUsername;
     Button bBook;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +68,12 @@ public class FinalBooking extends AppCompatActivity implements View.OnClickListe
         etUsername = findViewById(R.id.etName);
         tvSourceName=findViewById(R.id.tvSourceName);
         tvDestName=findViewById(R.id.tvDestName);
+
+        if(getIntent().getExtras().getBoolean("display",false)){
+            bBook.setVisibility(View.GONE);
+            etUsername.setVisibility(View.GONE);
+            Toast.makeText(this, "Your Ticket is Confirmed", Toast.LENGTH_SHORT).show();
+        }
 
         setDataOnUI();
     }

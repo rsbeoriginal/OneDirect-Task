@@ -20,7 +20,9 @@
         <activity android:name=".View.Admin.AdminMain" />
         <activity android:name=".View.Client.ClientMain" />
         <activity android:name=".View.Client.FlightList" />
-        <activity android:name=".View.Client.FinalBooking"></activity>
+        <activity android:name=".View.Client.FinalBooking" />
+        <activity android:name=".View.Admin.AddAirport" />
+        <activity android:name=".View.Admin.ViewAirport"></activity>
     </application>
 
 </manifest>
